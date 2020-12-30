@@ -11,7 +11,7 @@
 #################################################################
 
 #Run python script to create new GitHub repo
-python ./create.py $1
+python3 ./create.py $1
 
 #Create new project directory in my-projects
 cd /Users/aryanshah/Desktop/MyProjects
@@ -25,3 +25,8 @@ echo "# $1" >> README.md
 git add .
 git commit -m "Initial commit"
 git branch -M main
+git remote add origin https://github.com/aryanshah701/$1.git
+git push -u origin main
+
+#Opening up visual studio code
+code .
